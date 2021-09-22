@@ -5,9 +5,9 @@ import CardContent from "@material-ui/core/CardContent";
 
 import Typography from "@material-ui/core/Typography";
 
-import category_image1 from "../category_image1.webp";
-import category_image2 from "../category_image2.jpeg";
-import category_image3 from "../category_image3.jpeg";
+import category_image1 from "../assets/category_image1.webp";
+import category_image2 from "../assets/category_image2.jpeg";
+import category_image3 from "../assets/category_image3.jpeg";
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import ButtonBase from "@material-ui/core/ButtonBase";
-import image from "../bestproduct.webp";
+import image from "../assets/bestproduct.webp";
 import { Button } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {

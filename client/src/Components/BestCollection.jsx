@@ -1,14 +1,13 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
-import ButtonBase from "@material-ui/core/ButtonBase";
-import image from "../best_collection.webp";
-import image2 from "../jeans.webp";
-import image3 from "../clothes1.png";
-import image4 from "../clothes2.png";
-import image5 from "../clothes3.png";
+//TODO: Change Image naming to describe the picture it self
+import image from "../assets/best_collection.webp";
+import image2 from "../assets/jeans.webp";
+import image3 from "../assets/clothes1.png";
+import image4 from "../assets/clothes2.png";
+import image5 from "../assets/clothes3.png";
 
 import { Button } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
