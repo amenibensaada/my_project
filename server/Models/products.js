@@ -7,7 +7,7 @@ const productSchema = new mongoose.Schema({
     required: true,
   },
   name: {
-    type: Number,
+    type: String,
   },
 
   date: {
@@ -30,30 +30,44 @@ const app = express();
 app.use(express.json());
 
 app.get("/products", async (req, res) => {
-  const products = await Product.find();
-  res.json(products);
+  try {
+    const result = await Product.find();
+    return res.json(result);
+  } catch (e) {
+    console.log("errorrrrrrr", e);
+  }
 });
 
 app.post("/products", async (req, res) => {
   const body = req.body;
-
-  await Product.create(body);
-  res.json(body);
+  try {
+    const result = await Product.create(body);
+    return res.json(result);
+  } catch (e) {
+    console.log("errorrrrrrr", e);
+  }
 });
 
 app.delete("/products/:id", async (req, res) => {
   const id = req.params.id;
-
-  const deletedProduct = await Product.findByIdAndDelete(id);
-  res.json(deletedProduct);
+  try {
+    const deletedProduct = await Product.findByIdAndDelete(id);
+    res.json(deletedProduct);
+  } catch (e) {
+    console.log("errorrrrrrr", e);
+  }
 });
 
 app.patch("/products/:id", async (req, res) => {
   const id = req.params.id;
-  const body = req.body;
-  const updatedProduct = await Product.findByIdAndUpdate(id, body);
+  try {
+    const body = req.body;
+    const updatedProduct = await Product.findByIdAndUpdate(id, body);
 
-  res.json(updatedProduct);
+    res.json(updatedProduct);
+  } catch (e) {
+    console.log("errorrrrrrr", e);
+  }
 });
 
 module.exports = app;

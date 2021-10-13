@@ -1,14 +1,9 @@
-const app = require("./app");
+const app = require("../Models/Products");
 const mongoose = require("mongoose");
 
 const port = 8000;
 mongoose
-  .connect("mongodb://localhost:27017/bmerce", {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-  })
+  .connect("mongodb://localhost:27017/bmerce")
   .then(() => console.log("DB connected successfully "))
   .catch((e) => console.log(e));
 
